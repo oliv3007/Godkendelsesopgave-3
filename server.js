@@ -1,14 +1,23 @@
 const express = require('express');
-const User = require('./Modul/User');
+const app = express();
 
-const app = express()
+//Laver endpoints
+app.get('/', (req, res) => {
+  res.send('Root of the CRUD')
+});
 
-//Laver routes og endpoints
-/*app.get('./User', (req, res) => res.json());*/
+// user endpoint 
+const user = require('./Controller/user.js');
+app.use('/user', user);
 
-app.get('/', function (req, res) {
-    res.send('hello world')
-  })
+// interest endpoint
+const interest = require('./Controller/interest');
+app.use('/interest', interest);
+
+// match endpoint
+const match = require('./Controller/match');
+app.use('/match', match);
+
 
 
 const PORT = process.env.PORT || 5000;

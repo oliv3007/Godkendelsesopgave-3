@@ -1,9 +1,0 @@
-class Interest{
-    constructor()
-}
-
-class Match{
-    constructor()
-}
-
-“Using my API, users can create, read, update and delete $THINGs.”

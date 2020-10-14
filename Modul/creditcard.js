@@ -6,6 +6,6 @@ class Creditcard{
         this.cvc = cvc;
     }
 }
-var credit = new Creditcard('1234 5678 9012 3456', "02/23", "123")
+var credit = new Creditcard('Oliver Andersen', '1234 5678 9012 3456', "02/23", "123")
 
 exports.Creditcard = Object.values(credit)
