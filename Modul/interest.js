@@ -9,5 +9,6 @@ class Interest{
 var oliverint = new Interest('pizza', 'fishing', 'swimming');
 var idaint = new Interest('pizza', 'painting', 'handball');
 
-exports.myInterest1 = [oliverint];
-exports.myInterest2 = [idaint];
+exports.myInterest1 = Object.values(oliverint);
+exports.myInterest2 = Object.values(idaint);
+

@@ -26,14 +26,17 @@ class PaymentUser extends User{
 const Creditcard = require('./creditcard')
 const Interest = require('./interest')
 
-var User1 = new PaymentUser(1, 'Oiver', 'Andersen', 21, 'male',  Interest.myInterest1, 'Copenhagen', Creditcard);
-var User2 = new User(2, 'Ida', 'Jensen', 22, 'female', Interest.myInterest2, 'Copenhagen');
+var User1 = new PaymentUser(1, 'Oliver', 'Andersen', 21, 'male',  Interest.myInterest1, 'Copenhagen', Creditcard);
+var User2 = new FreeUser(2, 'Ida', 'Jensen', 22, 'female', Interest.myInterest2, 'Copenhagen');
 
-var UsersArray = [User1, User2];
+var UsersArray1 = [User1, User2];
 
-console.log(User1)
+var User1updated = new PaymentUser(1, 'Oliver', 'Andersen', 21, 'male',  Interest.myInterest1, 'Odense', Creditcard);
 
-
+exports.UsersArray = UsersArray1;
+exports.User1 = User1;
+exports.User2 = User2;
+exports.User1updated = User1updated;
 
 
 
